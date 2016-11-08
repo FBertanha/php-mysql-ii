@@ -15,11 +15,11 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="index.php">Minha Loja </a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-2" aria-expanded="false" style="height: 1px;">
@@ -27,7 +27,12 @@
             <li><a href="produto-formulario.php">Adiciona Produto</a></li>
             <li><a href="produto-lista.php">Lista Produto</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="logout.php">Logout</a></li>
+          </ul>
         </div>
+
+
       </div>
 
     </div>

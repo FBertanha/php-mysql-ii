@@ -2,6 +2,9 @@
   include('header.php');
   include('conecta.php');
   include('banco-categoria.php');
+  include('logica-usuario.php');
+
+  verificaUsuario();
 ?>
   <div class="row">
     <div class="col-md-4 col-md-offset-4">

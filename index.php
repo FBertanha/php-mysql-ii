@@ -1,18 +1,49 @@
 <?php
-  include('header.php');?>
-
+  include('header.php');
+  include('logica-usuario.php');
+?>
+  <?php if(isset($_GET['falhaDeSeguranca']) && $_GET['falhaDeSeguranca'] == true) { ?>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Você está não está conectado!</strong>
+        </div>
+      </div>
+    </div>
+  <?php } ?>
+  <?php if(isset($_GET['login']) && $_GET['login'] == false) { ?>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Falha ao se conectar!</strong> usuário o senha inválidos!
+        </div>
+      </div>
+    </div>
+  <?php } ?>
+  <?php if(isset($_GET['logout']) && $_GET['logout'] == true) { ?>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Deslogado com sucesso!</strong>
+        </div>
+      </div>
+    </div>
+  <?php } ?>
   <div class="row">
     <div class="col-md-12">
       <h3 class="text-center">Bem Vindo</h3>
     </div>
   </div>
   <?php
-    if(isset($_COOKIE['usuario_logado'])) { ?>
+    if(usuarioEstaLogado()) { ?>
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
           <div class="alert alert-dismissible alert-success">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Você está conectado!</strong> <?= $_COOKIE['usuario_logado'];?>
+            <strong>Você está conectado!</strong> <?= $_SESSION['usuario_logado'];?>
           </div>
         </div>
       </div>
