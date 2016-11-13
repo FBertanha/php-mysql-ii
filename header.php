@@ -1,3 +1,7 @@
+<?php
+  error_reporting(E_ALL ^ E_NOTICE);
+  include('mostra-alerta.php');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,9 +35,10 @@
             <li><a href="logout.php">Logout</a></li>
           </ul>
         </div>
-
-
       </div>
-
     </div>
     <div class="container-fluid">
+      <?php
+        mostraAlerta("success");
+        mostraAlerta("danger");
+      ?>

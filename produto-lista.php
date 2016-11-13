@@ -2,17 +2,8 @@
   include('header.php');
   include('conecta.php');
   include('banco-produto.php');
+  //include('mostra-alerta.php');
 ?>
-  <div class="row">
-    <?php if(array_key_exists("removido", $_GET) && $_GET["removido"] == true) { ?>
-    <div class="col-md-4 col-md-offset-4">
-      <div class="alert alert-dismissible alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Sucesso!</strong> Produto <?=$_GET['produto_id']?> removido!
-      </div>
-    </div>
-    <?php } ?>
-  </div>
   <div class="row">
     <div class="col-md-4 col-md-offset-4 table-responsive">
       <fieldset>

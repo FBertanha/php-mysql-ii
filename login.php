@@ -8,10 +8,12 @@
   $usuario = buscaUsuario($conexao, $emailUsuario, $senhaUsuario);
 
   if($usuario == null) {
-      header("Location: index.php?login=0");
+      $_SESSION['danger'] = "Usuário o senha inválidos!";
+      header("Location: index.php");
   } else {
+      $_SESSION['success'] = "Usuário conectado!";
       logaUsuario($usuario['email_usuario']);
-      header("Location: index.php?login=1");
+      header("Location: index.php");
   }
   die();
   //echo json_encode($usuario);

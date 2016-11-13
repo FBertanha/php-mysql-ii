@@ -39,3 +39,27 @@
       </tr>
   </tbody>
 </table>
+
+
+<?php if(isset($_SESSION['danger'])) { ?>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Erro!</strong> <?=$_SESSION['danger']?>
+        <?php unset($_SESSION['danger']); ?>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+<?php if(isset($_SESSION['success'])) { ?>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Sucesso!</strong> <?=$_SESSION['success']?>
+        <?php unset($_SESSION['success']); ?>
+      </div>
+    </div>
+  </div>
+<?php } ?>
