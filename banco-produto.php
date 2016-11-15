@@ -11,6 +11,8 @@
   };
 
   function insereProduto($conexao, $produto, $preco, $descricao, $categoria, $usado) {
+    $produto = mysqli_real_escape_string($produto);
+    $descricao = mysqli_real_escape_string($descricao);
     $query = "INSERT INTO produtos (nome_produto, preco_produto, descricao_produto, id_categoria, usado_produto) VALUES ('{$produto}', '{$preco}', '{$descricao}', '{$categoria}', '{$usado}')";
     echo $query;
     return mysqli_query($conexao, $query);
@@ -28,6 +30,8 @@
   };
 
   function alteraProduto($conexao, $id, $produto, $preco, $descricao, $categoria, $usado) {
+    $produto = mysqli_real_escape_string($produto);
+    $descricao = mysqli_real_escape_string($descricao);
     $query = "UPDATE produtos SET nome_produto = '{$produto}' , preco_produto = '{$preco}', descricao_produto = '{$descricao}', id_categoria = '{$categoria}', usado_produto = '{$usado}' WHERE id_produto = '{$id}'";
     echo $query;
     return mysqli_query($conexao, $query);
