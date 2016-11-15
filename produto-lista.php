@@ -1,8 +1,8 @@
 <?php
-  include('header.php');
-  include('conecta.php');
-  include('banco-produto.php');
-  //include('mostra-alerta.php');
+  require_once('header.php');
+  //require_once('conecta.php');
+  require_once('banco-produto.php');
+  //require_once('mostra-alerta.php');
 ?>
   <div class="row">
     <div class="col-md-4 col-md-offset-4 table-responsive">
@@ -52,5 +52,5 @@
   </div>
 
 <?php
-  include('footer.php');
+  require_once('footer.php');
 ?>

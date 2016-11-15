@@ -1,7 +1,7 @@
 <?php
-  include('conecta.php');
-  include('banco-usuario.php');
-  include('logica-usuario.php');
+  //require_once('conecta.php');
+  require_once('banco-usuario.php');
+  require_once('logica-usuario.php');
   $emailUsuario = $_POST['email'];
   $senhaUsuario = $_POST['senha'];
 

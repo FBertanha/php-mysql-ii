@@ -1,7 +1,7 @@
 <?php
-  include('header.php');
-  include('logica-usuario.php');
-  //include('mostra-alerta.php');
+  require_once('header.php');
+  require_once('logica-usuario.php');
+  //require_once('mostra-alerta.php');
 ?>
 
   <div class="row">
@@ -50,5 +50,5 @@
       </div>
   <?php }?>
 <?php
-  include('footer.php');
+  require_once('footer.php');
 ?>

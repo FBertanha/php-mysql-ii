@@ -1,5 +1,5 @@
 <?php
-  include('logica-usuario.php');
+  require_once('logica-usuario.php');
 
   deslogaUsuario();
   $_SESSION['success'] = "Usuário desconectado!";

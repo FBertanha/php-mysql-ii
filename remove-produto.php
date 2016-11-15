@@ -1,8 +1,9 @@
 <?php
-  include('header.php');
-  include('conecta.php');
-  include('banco-produto.php');
-  include('logica-usuario.php');
+  require_once('header.php');
+  //require_once('conecta.php');
+  require_once('banco-produto.php');
+  require_once('logica-usuario.php');
+  verificaUsuario();
 
   $id = $_POST['id'];
   removeProduto($conexao, $id);
