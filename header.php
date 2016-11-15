@@ -1,6 +1,7 @@
 <?php
   error_reporting(E_ALL ^ E_NOTICE);
   require_once('mostra-alerta.php');
+  require_once('logica-usuario.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,9 +31,14 @@
           <ul class="nav navbar-nav">
             <li><a href="produto-formulario.php">Adiciona Produto</a></li>
             <li><a href="produto-lista.php">Lista Produto</a></li>
+            <li><a href="contato.php">Contato</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+          <?php if(usuarioEstaLogado()) { ?>
             <li><a href="logout.php">Logout</a></li>
+          <?php }else { ?>
+            <li><a href="index.php">Login</a></li>
+          <?php }; ?>
           </ul>
         </div>
       </div>
