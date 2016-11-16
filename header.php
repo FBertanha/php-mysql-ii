@@ -2,6 +2,7 @@
   error_reporting(E_ALL ^ E_NOTICE);
   require_once('mostra-alerta.php');
   require_once('logica-usuario.php');
+  //echo  . '/public_html/' .'mostra-alerta.php';
 ?>
 <!DOCTYPE html>
 <html>

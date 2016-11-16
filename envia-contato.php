@@ -4,7 +4,7 @@
   $email = $_POST['email'];
   $mensagem = $_POST['mensagem'];
   require_once('mostra-alerta.php');
-  require_once('phpmailer\PHPMailerAutoload.php');
+  require_once('\phpmailer\PHPMailerAutoload.php');
 
   $mail = new PHPMailer();
   $mail->isSMTP();
@@ -13,7 +13,7 @@
   $mail->SMTPSecure = 'tls';
   $mail->SMTPAuth = true;
   $mail->Username = 'phpmysqlitwo@gmail.com';
-  $mail->Password = 'bindamels2';
+  $mail->Password = '';//
 
   $mail->setFrom('phpmysqlitwo@gmail.com', 'Loja PhpMySQL2');
   $mail->addBCC('phpmysqlitwo@gmail.com', 'Email de '. $nome);
